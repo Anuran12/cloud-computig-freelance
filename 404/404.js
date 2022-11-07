@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    //your code here
     var makeItRain = function() {
         //clear out everything
         $('.rain').empty();
