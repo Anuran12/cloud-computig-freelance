@@ -1,11 +1,3 @@
-// Necessary GSAP libs:
-// * TweenLite.min.js
-// * TimelineLite.min.js
-// * AttrPlugin.min.js
-// * CSSPlugin.min.js
-//
-// Total size is about 80kB
-
 window.onload = function () {
     // Keep graphics fit the screen for small devices
     mobileScale();
@@ -13,7 +5,7 @@ window.onload = function () {
     // Loop timeline
     let tl = new TimelineLite({
         onComplete: function() {
-            this.restart();
+            
         }
     });
   
@@ -35,38 +27,17 @@ window.onload = function () {
     });
   
     // Draw emoji
-    tl.to('.agry-emoji', 0, {
+    tl.to('.emoji', 0, {
         x: 9,
         y: 7,
     });
-    tl.to('.agry-emoji', 0.5, {
+    tl.to('.emoji', 0.5, {
       opacity: 1,
   });
   
-    // make boxes fly from the laptop center + fade in the boxs
-    const delta = [
-        {x: 12, y: 17},
-        {x: -15, y: 13},
-       
-        
-    ];
-    const textBoxes = Array.from(document.getElementsByClassName('text-block'));
-    for (idx in delta) {
-        tl.fromTo(textBoxes[idx], 2, {
-            x: delta[idx].x,
-            y: delta[idx].y
-        }, {
-            x: 0,
-            y: 0,
-            opacity: 1,
-            ease: Power2.easeOut
-        }, 2.5);
-    }
+   
   
-    // fade out the whole container
-    tl.to('.container', 0.5, {
-        opacity: 0
-    }, '+=1');
+    
   };
   
   window.onresize = mobileScale;
