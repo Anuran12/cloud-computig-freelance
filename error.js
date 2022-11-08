@@ -34,6 +34,24 @@ window.onload = function () {
     tl.to('.emoji', 0.5, {
       opacity: 1,
   });
+
+  // make boxes fly from the laptop center + fade in the boxs
+  const delta = [
+    {x: 12, y: 17},
+    {x: -15, y: 13},
+];
+const textBoxes = Array.from(document.getElementsByClassName('text-block'));
+for (idx in delta) {
+    tl.fromTo(textBoxes[idx], 2, {
+        x: delta[idx].x,
+        y: delta[idx].y
+    }, {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        ease: Power2.easeOut
+    }, 2.5);
+}
   
    
   

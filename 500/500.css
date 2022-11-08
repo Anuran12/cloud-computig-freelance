@@ -28,3 +28,22 @@
     transform-style: preserve-3d;
     backface-visibility: visible;
 }
+
+.forbidden {
+    fill: #C64C4C;
+    color: #953939;
+    top: 49px;
+    left: 74px;
+    border-radius: 4px;
+    background-color: #FCBFBF;
+    box-shadow: 0 5px 22px -5px rgba(0, 0, 0, 0.3);
+}
+.info-txt {
+    fill: #CC7825;
+    color: #995A1C;
+    top: 70px;
+    left: 342px;
+    border-radius: 4px;
+    background-color: #FFD5AB;
+    box-shadow: 0 5px 22px -5px rgba(0, 0, 0, 0.3);
+}
